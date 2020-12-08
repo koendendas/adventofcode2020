@@ -8,9 +8,7 @@ for(var i = 0; i < textByLine.length; i++){
     var range = [0,127];
     console.log(textByLine[i]);
     var firstPart = textByLine[i].substr(0,7);
-    //console.log(firstPart);
     for(var j = 0; j < firstPart.length; j++){
-        //console.log(firstPart.charAt(j));
         if(firstPart.charAt(j) === 'F' && j < firstPart.length){
             var rangeMax = range[1];
             var rangeMin = range[0];
@@ -30,11 +28,8 @@ for(var i = 0; i < textByLine.length; i++){
         if( j === firstPart.length-1 ){
             row = Math.min(range[0], range[1]);
         }
-       // console.log(range);
     }
-   // console.log(row);
     var lastPart = textByLine[i].substr(7,textByLine[i].length-1);
-   // console.log(lastPart);
     var width = [0,7];
     var column = 0;
     for(var l = 0; l < lastPart.length; l++){
@@ -57,9 +52,7 @@ for(var i = 0; i < textByLine.length; i++){
         if( l === lastPart.length-1 ){
             column = Math.max(width[0], width[1]);
         }
-        //console.log(width);
     }
-    //console.log(column);
 
     var id = parseInt(row * 8 + column);
     ids.push(id);
@@ -67,22 +60,18 @@ for(var i = 0; i < textByLine.length; i++){
         console.log('NEW HIGHEST ID:' + id);
         highestId = id;
     }
-    //console.log('ID: ' + parseInt(row * 8 + column));
 }
 console.log(128*8);
 var missingIds = [];
 for( var i = 0; i < ids.length; i++){
-
     var leftNeighbour = parseInt(ids[i]) - 1;
     var rightNeighbour = parseInt(ids[i]) + 1;
     if(leftNeighbour > 0 && ids.includes(leftNeighbour)){
-       // console.log('left neighbour found');
     }else{
         console.log(ids[i]);
         console.log('left neighbour not found');
     }
     if(rightNeighbour > 0 && ids.includes(rightNeighbour)){
-        // console.log('left neighbour found');
     }else{
         console.log(ids[i]);
         console.log('right neighbour not found');

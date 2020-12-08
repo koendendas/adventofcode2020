@@ -1,16 +1,12 @@
 const h = require('../helpers');
 console.log('day 3');
 var textByLine = h.getArrayFromInputText('first_week/inputs/day3.txt');
-
 var slopes = [1,3,5,7];
-
 var multiply = 1;
 
 for(var s = 0; s < slopes.length; s++ ) {
     var factor = Math.ceil(textByLine.length * slopes[s] / textByLine[0].length);
-
     var newInput = [];
-
     for (var i = 0; i < textByLine.length; i++) {
         var line = '';
         for (var j = 0; j < factor + 1; j++) {
@@ -30,7 +26,6 @@ for(var s = 0; s < slopes.length; s++ ) {
 }
 
 var factor2 = Math.ceil(textByLine.length / 2) ;
-
 var newInput2 = [];
 
 for (var i = 0; i < textByLine.length; i++) {

@@ -22,14 +22,11 @@ for(var i = 0; i < textByLine.length; i++){
 }
 
 var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-
 var total = 0;
 for(var j=0; j<groupedArrayAnswers.length; j++){
     var indCount = 0;
     console.log(groupedArrayAnswers[j]);
     var groupSize = groupedArrayAnswers[j].length;
-   // console.log(groupSize);
-
     for(var a=0; a<alphabet.length; a++){
         var checkedChar = alphabet[a];
         var charCount = 0;

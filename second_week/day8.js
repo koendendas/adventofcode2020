@@ -76,7 +76,6 @@ function getAccum(inList, keyList) {
     }
 }
 
-
 function getAdjustedListReplaceJumpByNop(){
     var jumps = [];
     for(var i=0; i<instructions.length; i++) {
@@ -88,7 +87,6 @@ function getAdjustedListReplaceJumpByNop(){
         instructionListsForJumps[j][jumps[j]][0] = 'nop';
     }
 }
-
 
 function getAmountOfJump() {
     var count = 0;
@@ -111,7 +109,6 @@ function getAdjustedListReplaceNopByJump(){
         instructionListsForNops[j][nops[j]][0] = 'jmp';
     }
 }
-
 
 function getAmountOfNop() {
     var count = 0;
