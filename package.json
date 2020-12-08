@@ -1,0 +1,14 @@
+{
+  "name": "advent",
+  "version": "0.0.1",
+  "scripts": {
+    "day1": "node first_week/day1.js",
+    "day2": "node first_week/day2.js",
+    "day3": "node first_week/day3.js",
+    "day4": "node first_week/day4.js",
+    "day5": "node first_week/day5.js",
+    "day6": "node first_week/day6.js",
+    "day7": "node first_week/day7.js",
+    "day8": "node second_week/day8.js"
+  }
+}
