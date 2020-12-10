@@ -19,13 +19,13 @@ for(var i=0; i<textByLine.length; i++){
 console.log('answer:' + oneJolt*threeJolt);
 
 var steps = {"steps":{0:1}};
+for(var t=1; t<textByLine.length; t++){
+    steps.steps[t] = 0;
+}
 function getSteps(list) {
     for(var i = 0; i < list.length; i++) {
       var j = i+1;
       while(parseInt(list[j]) - parseInt(list[i]) <= 3) {
-        if(!steps.steps[j]){
-            steps.steps[j] = 0;
-        }
         steps.steps[j] = steps.steps[j] + steps.steps[i];
         j++;
       }
