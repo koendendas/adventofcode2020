@@ -10,6 +10,7 @@
     "day6": "node first_week/day6.js",
     "day7": "node first_week/day7.js",
     "day8": "node second_week/day8.js",
-    "day9": "node second_week/day9.js"
+    "day9": "node second_week/day9.js",
+    "day10": "node --max-old-space-size=8192 second_week/day10.js"
   }
 }
